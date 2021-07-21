@@ -10,9 +10,11 @@ namespace snakeandladderproblem
         {
             int playerpos= 0;
             int previousposition = 0;
+            int count = 0;
             
             while (playerpos < 100)
             {
+                count++;
                 Random random = new Random();
                 int roll = random.Next(1, 7);
                 int option = random.Next(1, 3);
@@ -42,6 +44,7 @@ namespace snakeandladderproblem
                         Console.WriteLine("No play");
                         break;
                 }
+                Console.WriteLine("number of times dice was rolled :"+count);
                 
             }
 
