@@ -9,6 +9,7 @@ namespace snakeandladderproblem
         public void sandl()
         {
             int playerpos= 0;
+            int previousposition = 0;
             
             while (playerpos < 100)
             {
@@ -22,7 +23,11 @@ namespace snakeandladderproblem
                         Console.WriteLine("Ladder");
                         playerpos += roll;
                         if (playerpos > 100)
+                        {
                             playerpos -= roll;
+                            previousposition = playerpos;
+                            Console.WriteLine("player position will retain in :"+previousposition);
+                        }
                         Console.WriteLine("player position is :" + playerpos);
                         break;
                     case 2:
