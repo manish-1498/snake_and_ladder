@@ -9,11 +9,31 @@ namespace snakeandladderproblem
         public void sandl()
         {
             int playerpos= 0;
-            Console.WriteLine("player position is"+playerpos);
             Random random = new Random();
             int roll = random.Next(1, 7);
-            playerpos += roll;
-            Console.WriteLine("player's new position is:"+playerpos);
+            
+            int option = random.Next(1, 3);
+            switch (option)
+            {
+                case 1:
+                    Console.WriteLine("roll value is" + roll);
+                    Console.WriteLine("Ladder");
+                    playerpos += roll;
+                    Console.WriteLine("player position is :" + playerpos);
+                    break;
+                case 2:
+                    Console.WriteLine("roll value is" + roll);
+                    Console.WriteLine("Snake");
+                    playerpos -= roll;
+                    if (playerpos < 0)
+                        playerpos = 0;
+                    Console.WriteLine("player position is :" + playerpos);
+                    break;
+                default:
+                    Console.WriteLine("No play");
+                    break;
+            }
+
         }
     }
 }
