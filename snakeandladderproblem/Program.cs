@@ -6,7 +6,7 @@ namespace snakeandladderproblem
     {
         static void Main(string[] args)
         {
-            snakeandladder sl = new snakeandladder();
+            Snakeandladder sl = new Snakeandladder();
             sl.sandl();
         }
     }
